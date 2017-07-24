@@ -106,9 +106,6 @@ void HelloWorld::createTestMenu()
         CCLOG("Capture screen");
 #if (COCOS2D_VERSION > 0x00030000)
         std::string path = "screenshot.png";
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
-        path = "/mnt/sdcard/screenshot.png";
-#endif
         utils::captureScreen(CC_CALLBACK_2(HelloWorld::afterCaptureScreen, this), path);
 #endif
     }));
